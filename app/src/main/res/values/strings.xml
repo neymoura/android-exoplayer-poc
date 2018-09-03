@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Exoplayer POC</string>
+    <string name="exoplayer_no_message_error">No exception message provided</string>
+</resources>
