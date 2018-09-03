@@ -22,7 +22,7 @@ class PlayerActivity : AppCompatActivity() {
 
     private fun setup() {
         viewModel = ViewModelProviders.of(this).get(PlayerViewModel::class.java)
-        exo_play.player = viewModel.player
+        player_view.player = viewModel.player
     }
 
     private fun setImmersiveMode(){
