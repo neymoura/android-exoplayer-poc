@@ -36,4 +36,9 @@ class PlayerViewModel(application: Application): AndroidViewModel(application) {
 
     }
 
+    override fun onCleared() {
+        player.release()
+        super.onCleared()
+    }
+
 }
