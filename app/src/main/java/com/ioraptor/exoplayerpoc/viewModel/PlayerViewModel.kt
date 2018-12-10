@@ -53,7 +53,14 @@ class PlayerViewModel(application: Application) : AndroidViewModel(application) 
 
     private fun subtitledMediaSource(): MediaSource {
 
-        val mediaSource = mediaSourceFactory.createMediaSource(Uri.parse("http://jell.yfish.us/media/jellyfish-3-mbps-hd-h264.mkv"))
+        val videoUrl = arrayOf(
+                "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Zeitgeist/Zeitgeist%202010_%20Year%20in%20Review.mp4",
+        "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/Demo%20Slam/Google%20Demo%20Slam_%2020ft%20Search.mp4",
+        "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Gmail%20Blue.mp4",
+        "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Fiber%20to%20the%20Pole.mp4",
+        "http://commondatastorage.googleapis.com/android-tv/Sample%20videos/April%20Fool's%202013/Introducing%20Google%20Nose.mp4")
+
+        val mediaSource = mediaSourceFactory.createMediaSource(Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"))
 
         val subtitleFormat = Format.createTextSampleFormat(
                 "sub",
